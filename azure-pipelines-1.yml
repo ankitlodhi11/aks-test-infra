@@ -1,0 +1,25 @@
+trigger:
+- main
+
+pool:
+  name: dhurander
+
+steps:
+  - 
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'pnkuaks'
+    backendAzureRmStorageAccountName: 'akstest987654321'
+    backendAzureRmContainerName: 'tfstate'
+    backendAzureRmKey: 'terraform.tfstate'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
+
