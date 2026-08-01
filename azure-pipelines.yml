@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: dhurander
+   dhurander
 
 steps:
 - script: echo Hello, world!
