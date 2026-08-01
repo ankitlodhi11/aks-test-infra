@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: pinky
+spec:
+  containers: 
+    - name: nginx-pod
+      image: nginx
+    
+      ports:
+        - containerPort: 80
