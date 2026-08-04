@@ -23,3 +23,11 @@ steps:
     provider: 'azurerm'
     command: 'validate'
 
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
