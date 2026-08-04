@@ -27,6 +27,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
+    environmentServiceNameAzureRM: 'pnkuaks'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
